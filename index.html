@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Ygor Takashi Nishi - Portfolio Online</title>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet"> 
+		<script type="text/javascript" src="js/scripts.js"></script>	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	</head>
+
+	<body>
+
+			<div id="navigation" class="navigation">
+				<ul>
+					<li>
+						<a href="index.html"> Home </a>
+					</li>
+					<li>
+						<a href="portfolio.html"> Portfolio </a>
+					</li>
+					<li>
+						<a href="curriculo.html"> Currículo </a>
+					</li>
+					<li>
+						<a href="contato.html"> Contato </a>
+					</li>
+					<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+				</ul>
+			</div>
+
+			<div class="capa">
+				<div class="profile-pic">
+					<img src="img/takashi-profile.jpg" alt="Foto de Ygor Takashi Nishi">
+				</div>
+				
+				<div class="profile-title">
+					<h1>Ygor <span>Takashi Nishi</span></h1>
+					<h2 id="subtitle" style="margin-bottom: 5px; padding-bottom: 10px; border-bottom: solid grey 1px;"></h2>
+					<h3>Redes Sociais:</h3>
+					<a href="https://www.instagram.com/ttakashi.nishi/" target="_blank"><img class="social-img" src="img/instagram.png" alt="Link para o instagram"></a>
+					<a href="https://www.linkedin.com/in/takashi-nishi/" target="_blank"><img class="social-img" src="img/linkedIn.png" alt="Link para o linkedin"></a>
+					<a href="https://twitter.com/T4kachonishi" target="_blank"><img class="social-img" src="img/twitter.png" alt="Link para o twitter"></a>
+					<a href="https://github.com/TakashiNishii" target="_blank"><img class="social-img" src="img/github.png" alt="Link para o github"></a>
+					<a href="https://wa.me/5518996682139?text=" target="_blank"><img class="social-img" src="img/whatsapp.png" alt="Link para o github"></a>
+				</div>
+			</div>
+	</body>
+	<script>
+		var content = 'Desenvolvedor Full-stack - Desenvolvedor mobile - DBA - Técnico em informática';
+		var text = document.getElementById('subtitle');
+		var speed = 50;
+		var cont = 0;
+		function typeWriter() {
+			if(cont < content.length){
+				text.textContent += content.charAt(cont);
+				cont++;
+				setTimeout(typeWriter, speed);
+			}
+		}
+		typeWriter(); 
+	</script>
+</html>
